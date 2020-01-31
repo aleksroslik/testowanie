@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script><style>body</style>
+    </script>
+      <style>
+        .serif {font-family: "Georgia", Times, serif;
+color: #330033;
+font-style: italic;
+text-align: center;
+vertical-align: middle;
+}
+#color {font-family: "Georgia", Times, serif; color: white; text-align: center;
+}
+#paragraph {
+    height: 150px; width: 600px;
+    background-color: #ffccff;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    }
+#paragraph2 {
+    width: 600px;
+    border-style: solid;
+    background-color: #ffccff;
+    display: inline-table;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    }
+/* popracować nad ułożeniem */
+.media {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#aboutme {
+  text-decoration: underline;
+  color: #330033;
+   font-size: 20pt;
+   text-shadow: 5px 2px 4px grey;
+}
+#borders {
+   padding: 10px;    
+   border: 5px black;
+   border-style: solid;
+   background-color: #ffccff;
+   border-radius: 20px;
+}
+a:hover {
+   color: red;
+}
+button:hover {
+   color: red;
+  cursor: pointer;
+}
+#image {
+   float: right;
+   width: 200px;
+   padding-left: 20px;
+   padding-top: 60px;
+  }
+#image2 {
+   float: right;
+   width: 200px;
+   padding-left: 20px;
+   }
+.calm {font-family: Georgia, serif;
+font-size: 42px;
+color: #330033;
+font-weight: 700;
+font-style: italic;
+text-align: center;
+}
+.item {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    align-items: center;
+}
+body {background-image: url('https://404store.com/2018/08/07/3pretty-purple-background.jpg');
+background-repeat: repeat;
+}
+button {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+}
+      </style>
+<meta charset="utf-8">
+</head>
+<body>
+  <script>alert("UWAGA - treści bardzo osobiste! :)");
+
+var images = [
+  "http://www.sololearn.com/uploads/slider/1.jpg", 
+  "http://www.sololearn.com/uploads/slider/2.jpg", 
+  "http://www.sololearn.com/uploads/slider/3.jpg"
+  ];
+  var num = 0;
+
+function next() {
+  var slider = document.getElementById("slider");
+  num++;
+  if(num >= images.length) {
+    num = 0;
+  }
+  slider.src = images[num];
+  }
+
+function prev() {
+  var slider = document.getElementById("slider");
+  num--;
+  if(num < 0) {
+    num = images.length-1;
+  }
+  slider.src = images[num];
+ }
+</script>
+
+    <h1 class="serif" id="color">Do góry Nogami</h1>
+    <section class="media" id="color">
+    <nav>Content - panel nawigacyjny</nav>
+    <div class="item">
+    <ul id="item">
+      <li class="item"><a href="#">TBC</a></li>
+      <li class="item"><a href="#">TBC</a></li>
+      <li class="item"><a href="#">TBC</a></li>
+    </ul>
+     
+    <button onclick="getElementById('demo').innerHTML=Date()">What day is today?</button>
+    <p id="demo"></p>
+       </div>
+</header>
+    <br><br>
+</section><br><br>
+<article id="borders" class="serif">
+<h3 id="aboutme"><span>About Me</span></h3>
+<h5>Jestem Ola!</h5>
+<p class="serif1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</article>
+<br><br><br>
+<article id="borders" class="serif">
+<h3><span>Początki</span></h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<div>
+	   <button onclick="prev()"> Prev </button>
+	    <img id="slider" src="http://www.sololearn.com/uploads/slider/1.jpg" width="200px" height="100px" />
+         <button onclick="next()"> Next </button>
+        </div>
+</article>
+<br><br>
+<p class="serif" id="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br><br>
+    <article id="borders" class="serif">
+<div><section class="serif"><span style="cursor:help;"><a href="#">Przydatne linki</a><br><a href="#">Przydatne linki</a><br><a href="#">Przydatne linki</a><br><a href="#">Przydatne linki</a><br><a href="#">Przydatne linki</a><br></span></section></div></article><br><br>
+<article id="borders" class="serif">
+<p class="serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</article>
+<br><br>
+<section class="media">
+<audio class="media" src="http://www.hochmuth.com/mp3/Haydn_Cello_Concerto_D-1.mp3" controls>
+</audio>
+</section>
+<p class="serif" id="color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div>
+    <img id="image" src="http://www.softwaretestingstudio.com/wp-content/uploads/2017/12/Negative-Testing-to-Find-Bugs.jpg">
+    </div> 
+    <br><br>
+<p class="serif" id="color">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<br><br><br><br>
+<section class="media">
+<video class="media" controls autoplay loop>
+   <source class="media" src="tbc.mp4" type="video/mp4">
+   Video is not supported by your browser
+</video>
+</section>
+<br><br>
+<p id="color" class="serif">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<hr id="color">
+<div class="serif" id="color">
+Status: <progress id="color" class="serif" min="0" max="100" value="1">
+</progress></div>
+<br>
+<hr id="color">
+<footer class="serif" id="color">Stopka 
+<br>
+<form class="serif" id="color">
+    <label>Twój adres e-mail:</label>
+    <input type="text" name="email" placeholder="email@example.com" required/> 
+    <button onclick="show()">Subscribe</button>
+</form>
+</footer>
+</body>
+</html>
